@@ -40,10 +40,12 @@ export default function Navbar() {
               <p>ABOUT</p>
               <div>{dropdown ? <AiOutlineUp onClick={() => setDropdown(!dropdown)} /> : <AiOutlineDown onClick={() => setDropdown(!dropdown)} />}</div>
             </div>
-            <div className="px-3">
-              <p className="hover:bg-slate-700 p-4 hover:text-white">HISTORY</p>
-              <p className="hover:bg-slate-700 p-4 hover:text-white">VISION MISSION</p>
-            </div>
+            {dropdown && (
+              <div className="px-3">
+                <p className="hover:bg-slate-700 p-4 hover:text-white">HISTORY</p>
+                <p className="hover:bg-slate-700 p-4 hover:text-white">VISION MISSION</p>
+              </div>
+            )}
           </div>
           <div className="flex flex-col p-4">
             <p>OUR WORK</p>
